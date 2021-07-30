@@ -125,6 +125,7 @@ function increase() {
 function decrease() {
   for(var i=0; i<list.length; i++) {
       var x = parseFloat(list[i].children[1].textContent);
+      list[i].children[1].textContent =  (x - 0.0001).toFixed(4);
       if(x < parseFloat(list[i].children[1].textContent)) {
         list[i].children[1].style.backgroundColor = 'green';
       }
